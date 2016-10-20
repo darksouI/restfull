@@ -4,7 +4,7 @@ $(document).ready(function() {
       event.preventDefault();
     });
 
-    var titolo = $("input[name='titolo']");
+    var titolo = $("input[name='titolo']").val();
     $.ajax({
       url: 'http//:www.omdbapi.com/?s='+ titolo,
       method: 'GET'
