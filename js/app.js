@@ -3,6 +3,10 @@ $(document).ready(function() {
     $("#search").submit(function(event){
       event.preventDefault();
 
+      $.LoadingOverlay("show", {
+        fontawesome: "fa fa-spinner fa-spin"
+      });
+
     var titolo = $("input[name='titolo']").val();
     $.ajax({
       url: 'http://www.omdbapi.com/?s='+ titolo,
