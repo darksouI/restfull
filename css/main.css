@@ -23,3 +23,7 @@
 .form {
   text-align: left;
 }
+
+.form > input, select {
+  border-radius: 3px;
+}
