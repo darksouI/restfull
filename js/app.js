@@ -28,7 +28,7 @@ $(document).ready(function() {
             tr +="</tr>";
 
             //console.log(tr);
-            $("thead").show();
+            $(".ricerca").show();
             $("#table").show();
             $.LoadingOverlay("hide");
         }
