@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
-    $("#search").on("click")
+    $("#search").submit(function(event){
+      event.preventDefault();
+    });
 
 });
