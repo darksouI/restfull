@@ -13,3 +13,8 @@
 .navbar-nav{
 	float: right;
 }
+
+.logo {
+  margin-top: 20px;
+  text-align: center;
+}
