@@ -2,11 +2,10 @@ $(document).ready(function() {
 
     $("#search").submit(function(event){
       event.preventDefault();
-    });
 
     var titolo = $("input[name='titolo']").val();
     $.ajax({
-      url: 'http//:www.omdbapi.com/?s='+ titolo,
+      url: 'http://www.omdbapi.com/?s='+ titolo,
       method: 'GET'
     }).then(function(data) {
         var tr = "";
@@ -24,6 +23,7 @@ $(document).ready(function() {
         }
         $("#tb_imdb").html(tr);
       //console.log(data);
+  });
     });
 
 });
