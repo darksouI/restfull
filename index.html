@@ -13,8 +13,8 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="container-fluid logo">
+    <div class="container-fluid">
+        <div class="container logo">
             <img src="img/imdb_logo.png">
             <form class="form" id="search">
               <label>Titolo</label>
@@ -29,14 +29,19 @@
               <button type="submit" class="btn btn-primary">Cerca</button>
              </form>
       </div>
-      <div class="container-fluid ricerca">
-          <table id="tb_imdb">
+      <div class="container ricerca">
+          <table id="table">
+              <thead>
+                  <th></th>
+                  <th>Anno</th>
+                  <th></th>
+                  <th>Genere</th>
+              </thead>
+              <tbody id="tb_imdb">
           </table>
       </div>
 
-      <div class="container-fluid dettaglio">
-          <table id="tb_dettaglio">
-          </table>
+      <div id="tb_dettaglio" class="container dettaglio">
       </div>
         <!-- APPLICATION START HERE -->
 

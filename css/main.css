@@ -14,6 +14,10 @@
 	float: right;
 }
 
+.sfondo {
+  background: url(../img/carta.jpg);
+}
+
 .logo {
   margin-top: 20px;
   text-align: center;
@@ -34,5 +38,17 @@
 }
 
 .dettaglio {
+  display: none;
+}
+
+.table {
+  display: none;
+}
+
+.center {
+  text-align: center;
+}
+
+.ricerca {
   display: none;
 }
