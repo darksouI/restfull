@@ -27,3 +27,8 @@
 .form > input, select {
   border-radius: 3px;
 }
+
+.img {
+  width: 50px;
+  height: 100px;
+}

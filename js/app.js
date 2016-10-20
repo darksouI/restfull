@@ -3,9 +3,6 @@ $(document).ready(function() {
     $("#search").submit(function(event){
       event.preventDefault();
 
-      $.LoadingOverlay("show", {
-        fontawesome: "fa fa-spinner fa-spin"
-      });
 
     var titolo = $("input[name='titolo']").val();
     $.ajax({
@@ -15,15 +12,19 @@ $(document).ready(function() {
         var tr = "";
         for (var i = 0; i < data.Search.length; i++) {
             var obj = data.Search[i];
-            tr += "<tr"+obj.Title+"'>";
+            tr += "<tr"+obj.Title+">";
             tr +="<td>" + obj.Year + "</td>";
             tr +="<td>" + obj.imdbID + "</td>";
             tr +="<td>" + obj.Type + "</td>";
-            tr +="<td>" + obj.Poster + "</td>";
+            if (obj.Poster == 'N/A') {
+              tr +='<td><img class="img" src="http://placehold.it/350x150"/></td>'
+            }else{
+            tr +="<td><img class='img' src='" + obj.Poster + "'/></td>";
+          }
             tr +="</tr>";
 
             //console.log(tr);
-            $.LoadingOverlay("hide");
+            //$.LoadingOverlay("hide");
         }
         $("#tb_imdb").html(tr);
       //console.log(data);
