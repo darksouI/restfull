@@ -22,8 +22,8 @@ $(document).ready(function() {
             //console.log(tr);
             $.LoadingOverlay("hide");
         }
-        $("#").html(tr);
-      console.log(data);
+        $("#tb_imdb").html(tr);
+      //console.log(data);
     });
 
 });
