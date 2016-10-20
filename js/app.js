@@ -4,4 +4,12 @@ $(document).ready(function() {
       event.preventDefault();
     });
 
+    var titolo = $("input[name='titolo']");
+    $.ajax({
+      url: 'http//:www.omdbapi.com/?s='+ titolo,
+      method: 'GET'
+    }).then(function(data) {
+      console.log(data);
+    });
+
 });
