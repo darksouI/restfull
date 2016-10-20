@@ -13,14 +13,14 @@ $(document).ready(function() {
         for (var i = 0; i < data.Search.length; i++) {
             var obj = data.Search[i];
             tr += "<tr"+obj.Title+">";
-            tr +="<td>" + obj.Year + "</td>";
-            tr +="<td>" + obj.imdbID + "</td>";
-            tr +="<td>" + obj.Type + "</td>";
             if (obj.Poster == 'N/A') {
               tr +='<td><img class="img" src="http://placehold.it/350x150"/></td>'
             }else{
             tr +="<td><img class='img' src='" + obj.Poster + "'/></td>";
           }
+          tr +="<td>" + obj.Year + "</td>";
+          tr +="<td>" + obj.imdbID + "</td>";
+          tr +="<td>" + obj.Type + "</td>";
             tr +="</tr>";
 
             //console.log(tr);
